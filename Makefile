@@ -17,7 +17,6 @@ binary: build
 	docker run --rm $(DOCKER_IMAGE_PREFIX):devel cat ./fasttext > fasttext.bin
 	chmod +x fasttext.bin
 	$(DOCKER_BUILD_CMD) -t $(DOCKER_IMAGE_PREFIX):binary -f Dockerfile.binary .
-	fasttext.bin
 
 # -----
 # Other make options below
